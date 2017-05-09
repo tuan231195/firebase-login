@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:fitsSystemWindows="true">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+        <TextView android:text="@string/app_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="72dp"
+                  android:textSize="40sp"
+                  android:id="@+id/app_banner"
+                  android:layout_marginBottom="24dp"
+                  android:layout_gravity="center_horizontal"/>
+
+        <!-- Email Label -->
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <com.tuannguyen.framework.validation.ValidateEditText android:id="@+id/input_email"
+                                                                  android:layout_width="match_parent"
+                                                                  android:layout_height="wrap_content"
+                                                                  app:controlName="email"
+                                                                  android:inputType="textEmailAddress"
+                                                                  android:hint="@string/email_hint"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <com.tuannguyen.framework.validation.ValidateEditText android:id="@+id/input_password"
+                                                                  android:layout_width="match_parent"
+                                                                  android:layout_height="wrap_content"
+                                                                  android:inputType="textPassword"
+                                                                  app:controlName="password"
+                                                                  android:hint="@string/password_hint"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:padding="12dp"
+                android:text="@string/login_btn"/>
+
+        <TextView android:id="@+id/link_signup"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="24dp"
+                  android:text="@string/create_account_link"
+                  android:gravity="center"
+                  android:textSize="16sp"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forgot_password"
+        >
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_1"
+                    android:layout_marginLeft="50dp"
+                    android:background="#fff" />
+
+            <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="or login with"
+                    android:textSize="13sp" />
+
+            <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_1"
+                    android:background="#fff" />
+        </RelativeLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_marginTop="24dp"
+                      android:layout_height="wrap_content">
+
+            <Button android:background="@drawable/common_signin_btn_text_dark"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:id = "@+id/btn_login_google"
+                    android:text="Sign In"
+                    android:textColor="#333"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+            />
+            <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/btn_login_facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_weight="1"
+                    app:fb_radius="2dp"
+                    app:fb_iconPosition="left"
+                    app:fb_fontIconSize="8sp"
+                    app:fb_iconPaddingRight="10dp"
+                    app:fb_text="Continue with"
+                    app:fb_textColor="#ffffff"
+                    app:fb_defaultColor="#39579B"
+                    app:fb_focusColor="#6183d2"
+                    app:fb_fontIconResource="&#xf230;"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
